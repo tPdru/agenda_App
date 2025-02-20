@@ -8,11 +8,20 @@
     android:orientation="vertical"
     tools:context=".SplashActivity">
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:layout_width="300dp"
-        android:layout_height="20dp"
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="300dp"
-        android:indeterminate="true"/>
+        android:layout_marginTop="150dp"
+        android:src="#2c2c2c" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:indicatorColor="#F64343"
+        app:trackColor="#D0A0A0"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:layout_marginTop="15dp" />
 
 </LinearLayout>

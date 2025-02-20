@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
-    Button btn_entrar;
+    Button btn_entrar, btn_tela_cadastro, btn_tela_Esqueci_senha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +26,30 @@ public class LoginActivity extends AppCompatActivity {
 
         btn_entrar = findViewById(R.id.btnLoginEntrar);
 
+        btn_tela_cadastro = findViewById(R.id.btnCriarConta);
+
+        btn_tela_Esqueci_senha = findViewById(R.id.btnEsqueceuSenha);
+
         btn_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), TelaPrincipalActivity.class));
+                finish();
+            }
+        });
+
+        btn_tela_cadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), CadastrarActivity.class));
+                finish();
+            }
+        });
+
+        btn_tela_Esqueci_senha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), TelaEsqueceuSenhaActivity.class));
                 finish();
             }
         });
