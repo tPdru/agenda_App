@@ -6,6 +6,15 @@
     android:orientation="vertical"
     android:background="#FF5252"
     tools:context=".AgendaFragment">
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recTelaAgenda"
+        android:background="#BAD1E9"/>
 
 
 </LinearLayout>
