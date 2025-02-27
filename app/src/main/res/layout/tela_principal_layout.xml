@@ -7,8 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".TelaPrincipalActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/teste">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topBarNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/menu_tela_principal"
+            app:title="Serviço Shop"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
+        android:layout_below="@id/teste"
         android:layout_height="match_parent"
         android:id="@+id/TelaPrincipalFlameContainer"/>
 
@@ -17,6 +32,6 @@
         android:id="@+id/botNavgationTelaPrincipal"
         android:layout_height="wrap_content"
         app:menu="@menu/menu_tela_principal"
-        android:layout_alignBottom="@id/TelaPrincipalFlameContainer"/>
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
