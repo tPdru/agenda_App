@@ -23,9 +23,15 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_below="@id/teste"
         android:layout_height="match_parent"
+        android:layout_above="@id/botNavgationTelaPrincipal"
         android:id="@+id/TelaPrincipalFlameContainer"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagTelaPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/botNavgationTelaPrincipal"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

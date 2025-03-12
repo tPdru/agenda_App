@@ -8,10 +8,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class TelaPrincipalActivity extends AppCompatActivity {
+
+    ViewPager2 view_pager_tela_principal;
+    AdaptadorTelaPrincipal adaptador_tela_principal;
+    BottomNavigationView bot_nav_tela_principal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,36 +28,48 @@ public class TelaPrincipalActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        //Apresenta a variavel botNavigation, JAVA + Xml
-        BottomNavigationView bot_nav_tela_principal = findViewById(R.id.botNavgationTelaPrincipal);
-        //abre a tela padrão sempre que for iniciado vai abrir na tela colocada aqui.
-        getSupportFragmentManager().beginTransaction().replace(R.id.TelaPrincipalFlameContainer, new AgendaFragment()).commit();
+
+        //Apresentando variaveis, JAVA + Xml
+        bot_nav_tela_principal = findViewById(R.id.botNavgationTelaPrincipal);
+        view_pager_tela_principal = findViewById(R.id.viewPagTelaPrincipal);
+        adaptador_tela_principal = new AdaptadorTelaPrincipal(this);
+
+        //Ligando viewPager e adaptador
+        view_pager_tela_principal.setAdapter(adaptador_tela_principal);
+
+
 
         //Pega o toque para saber qual tela foi escolhida pelo usuário.
         bot_nav_tela_principal.setOnItemSelectedListener(item -> {
-            //Fragmento vazio para receber a tela selecionada
-            Fragment fragment_escolhido = null;
 
-            /*Compara qual tela foi escolhida atravez do id e atribui a o fragment correspondente a
-             variavel fragment_escolhido.
-             */
+            //Compara qual tela foi escolhida atravez do id e atribui o valor correspondente no Adaptador.
             if(item.getItemId() == R.id.menuPrinncipalAgenda){
-                fragment_escolhido = new AgendaFragment();
+                view_pager_tela_principal.setCurrentItem(0);
 
             } else if (item.getItemId() == R.id.menuPrinncipalServico) {
-                fragment_escolhido = new ServicoFragment();
+                view_pager_tela_principal.setCurrentItem(1);
 
             } else if (item.getItemId() == R.id.menuPrinncipalPerfil) {
-                fragment_escolhido = new PerfilFragment();
+                view_pager_tela_principal.setCurrentItem(2);
 
             }
 
-
-            //Abre o fragmento esolhido
-            if (fragment_escolhido != null){
-                getSupportFragmentManager().beginTransaction().replace(R.id.TelaPrincipalFlameContainer, fragment_escolhido).commit();
-            }
             return true;
+        });
+
+
+        view_pager_tela_principal.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                if(position == 0){
+                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalAgenda);
+                } else if (position == 1) {
+                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalServico);
+                } else if (position == 2) {
+                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalPerfil);
+                }
+            }
         });
     }
 }
