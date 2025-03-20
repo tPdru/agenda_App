@@ -27,7 +27,6 @@
             android:id="@+id/txtFieldServico"
             android:layout_height="50dp"
             android:inputType="none"
-            app:simpleItems="@array/simple_items"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,7 +62,6 @@
             android:id="@+id/txtFieldHorario"
             android:layout_height="50dp"
             android:inputType="none"
-            app:simpleItems="@array/simple_items"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
