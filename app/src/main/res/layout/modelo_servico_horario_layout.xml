@@ -21,7 +21,7 @@
                 android:textSize="22sp" />
 
             <TextView
-                android:id="@+id/txtServiçoAgendado"
+                android:id="@+id/txtServicoAgendado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Calvão"

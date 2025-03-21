@@ -10,7 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/teste">
+        android:id="@+id/appBarLayoutTopMenuPrincipal">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topBarNav"
@@ -25,13 +25,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/botNavgationTelaPrincipal"
-        android:id="@+id/TelaPrincipalFlameContainer"/>
+        android:id="@+id/TelaPrincipalFlameContainer"
+        android:layout_below="@id/appBarLayoutTopMenuPrincipal"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPagTelaPrincipal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/botNavgationTelaPrincipal"/>
+        android:layout_above="@id/botNavgationTelaPrincipal"
+        android:layout_below="@id/appBarLayoutTopMenuPrincipal"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:title="Pesquisa"
+        android:enabled="true"
+        android:id="@+id/menuPrinncipalPesquisa"/>
+
+    <item
         android:title="Agenda"
         android:enabled="true"
         android:id="@+id/menuPrinncipalAgenda"/>

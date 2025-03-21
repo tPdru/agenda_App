@@ -43,15 +43,17 @@ public class TelaPrincipalActivity extends AppCompatActivity {
         bot_nav_tela_principal.setOnItemSelectedListener(item -> {
 
             //Compara qual tela foi escolhida atravez do id e atribui o valor correspondente no Adaptador.
-            if(item.getItemId() == R.id.menuPrinncipalAgenda){
+            if(item.getItemId() == R.id.menuPrinncipalPesquisa){
                 view_pager_tela_principal.setCurrentItem(0);
 
-            } else if (item.getItemId() == R.id.menuPrinncipalServico) {
+            } else if (item.getItemId() == R.id.menuPrinncipalAgenda) {
                 view_pager_tela_principal.setCurrentItem(1);
 
-            } else if (item.getItemId() == R.id.menuPrinncipalPerfil) {
+            } else if (item.getItemId() == R.id.menuPrinncipalServico) {
                 view_pager_tela_principal.setCurrentItem(2);
 
+            } else if (item.getItemId() == R.id.menuPrinncipalPerfil) {
+                view_pager_tela_principal.setCurrentItem(3);
             }
 
             return true;
@@ -63,10 +65,12 @@ public class TelaPrincipalActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 if(position == 0){
-                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalAgenda);
+                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalPesquisa);
                 } else if (position == 1) {
-                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalServico);
+                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalAgenda);
                 } else if (position == 2) {
+                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalServico);
+                } else if (position == 3) {
                     bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalPerfil);
                 }
             }

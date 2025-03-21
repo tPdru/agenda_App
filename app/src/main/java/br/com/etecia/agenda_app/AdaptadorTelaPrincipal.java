@@ -15,10 +15,12 @@ public class AdaptadorTelaPrincipal extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new AgendaFragment();
+                return new PesquisaPerfFragment();
             case 1:
-                return  new ServicoFragment();
+                return new AgendaFragment();
             case 2:
+                return  new ServicoFragment();
+            case 3:
                 return new PerfilFragment();
         }
         return null;
@@ -26,6 +28,6 @@ public class AdaptadorTelaPrincipal extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 4;
     }
 }
