@@ -13,6 +13,7 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/imgFotoPerfilPesquisa"
                 android:layout_width="175dp"
                 android:layout_height="match_parent"
                 android:src="#2c2c2c" />
