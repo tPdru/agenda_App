@@ -1,5 +1,6 @@
 package br.com.etecia.agenda_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -10,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class TelaPrincipalActivity extends AppCompatActivity {
@@ -17,6 +19,9 @@ public class TelaPrincipalActivity extends AppCompatActivity {
     ViewPager2 view_pager_tela_principal;
     AdaptadorTelaPrincipal adaptador_tela_principal;
     BottomNavigationView bot_nav_tela_principal;
+
+    MaterialToolbar mate_top_bar_items;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +34,30 @@ public class TelaPrincipalActivity extends AppCompatActivity {
             return insets;
         });
 
+        //Apresentando XML + JAVA
+        mate_top_bar_items = findViewById(R.id.topBarNavTelaPrincipal);
+        //Pegando a opção que o usuario clicou e chamando a activit correspondente
+        mate_top_bar_items.setOnMenuItemClickListener(item -> {
+            if (item.getItemId() == R.id.menuItemtopBarPerfil) {
+                startActivity(new Intent(getApplicationContext(),TelaSecundariaActivity.class));
+                finish();
+                return true;
+            } else if (item.getItemId() == R.id.menuItemtopBarCarrinho) {
+                startActivity(new Intent(getApplicationContext(),TelaSecundariaActivity.class));
+                finish();
+                return true;
+            }
+            return true;
+        });
+
+
+
+
+
         //Apresentando variaveis, JAVA + Xml
         bot_nav_tela_principal = findViewById(R.id.botNavgationTelaPrincipal);
         view_pager_tela_principal = findViewById(R.id.viewPagTelaPrincipal);
+        //Instanciando
         adaptador_tela_principal = new AdaptadorTelaPrincipal(this);
 
         //Ligando viewPager e adaptador
