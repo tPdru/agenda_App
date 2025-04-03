@@ -25,7 +25,7 @@ public class AdaptadorFragAgenda extends RecyclerView.Adapter<AdaptadorFragAgend
     public AdaptadorFragAgenda.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater inflater = LayoutInflater.from(context);
-        view = inflater.inflate(R.layout.modelo_servico_horario_layout,parent,false);
+        view = inflater.inflate(R.layout.modelo_comentario,parent,false);
         return new ViewHolder(view);
     }
 

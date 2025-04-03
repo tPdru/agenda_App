@@ -25,7 +25,7 @@ public class AdaptadorPerfilPesquisa extends RecyclerView.Adapter<AdaptadorPerfi
     public AdaptadorPerfilPesquisa.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater inflater = LayoutInflater.from(context);
-        view = inflater.inflate(R.layout.modelo_perfil_servico,parent, false);
+        view = inflater.inflate(R.layout.modelo_tela_inicial_perfil_servico,parent, false);
 
         return new ViewHolder(view);
     }
