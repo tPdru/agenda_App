@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), VerMaisSobreServioActivity.class));
+                startActivity(new Intent(getApplicationContext(), TelaPrincipalActivity.class));
                 finish();
             }
         });

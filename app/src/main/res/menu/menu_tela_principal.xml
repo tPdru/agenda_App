@@ -4,20 +4,20 @@
     <item
         android:title="Pesquisa"
         android:enabled="true"
-        android:id="@+id/menuPrinncipalPesquisa"/>
+        android:id="@+id/menuPrincipalPesquisa"/>
 
     <item
         android:title="Agenda"
         android:enabled="true"
-        android:id="@+id/menuPrinncipalAgenda"/>
+        android:id="@+id/menuPrincipalAgenda"/>
 
     <item
         android:title="Serviço"
         android:enabled="true"
-        android:id="@+id/menuPrinncipalServico"/>
+        android:id="@+id/menuPrincipalServico"/>
 
     <item
         android:title="Perfil"
         android:enabled="true"
-        android:id="@+id/menuPrinncipalPerfil"/>
+        android:id="@+id/menuPrincipalPerfil"/>
 </menu>

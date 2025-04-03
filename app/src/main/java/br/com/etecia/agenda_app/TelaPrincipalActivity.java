@@ -40,7 +40,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
         mate_top_bar_items.setOnMenuItemClickListener(item -> {
             if (item.getItemId() == R.id.menuItemtopBarPerfil) {
                 startActivity(new Intent(getApplicationContext(),TelaSecundariaActivity.class));
-                finish();
+                //finish();
                 return true;
             } else if (item.getItemId() == R.id.menuItemtopBarCarrinho) {
                 startActivity(new Intent(getApplicationContext(),TelaSecundariaActivity.class));
@@ -69,16 +69,16 @@ public class TelaPrincipalActivity extends AppCompatActivity {
         bot_nav_tela_principal.setOnItemSelectedListener(item -> {
 
             //Compara qual tela foi escolhida atravez do id e atribui o valor correspondente no Adaptador.
-            if(item.getItemId() == R.id.menuPrinncipalPesquisa){
+            if(item.getItemId() == R.id.menuPrincipalPesquisa){
                 view_pager_tela_principal.setCurrentItem(0);
 
-            } else if (item.getItemId() == R.id.menuPrinncipalAgenda) {
+            } else if (item.getItemId() == R.id.menuPrincipalAgenda) {
                 view_pager_tela_principal.setCurrentItem(1);
 
-            } else if (item.getItemId() == R.id.menuPrinncipalServico) {
+            } else if (item.getItemId() == R.id.menuPrincipalServico) {
                 view_pager_tela_principal.setCurrentItem(2);
 
-            } else if (item.getItemId() == R.id.menuPrinncipalPerfil) {
+            } else if (item.getItemId() == R.id.menuPrincipalPerfil) {
                 view_pager_tela_principal.setCurrentItem(3);
             }
 
@@ -91,13 +91,13 @@ public class TelaPrincipalActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 if(position == 0){
-                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalPesquisa);
+                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrincipalPesquisa);
                 } else if (position == 1) {
-                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalAgenda);
+                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrincipalAgenda);
                 } else if (position == 2) {
-                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalServico);
+                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrincipalServico);
                 } else if (position == 3) {
-                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrinncipalPerfil);
+                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrincipalPerfil);
                 }
             }
         });
