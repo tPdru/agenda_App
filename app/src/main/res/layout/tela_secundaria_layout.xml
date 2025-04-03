@@ -5,39 +5,38 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaPrincipalActivity">
+    tools:context=".TelaSecundariaActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/appBarLayoutTopMenuPrincipal">
+        android:id="@+id/appBarLayoutTopTelaSecundaria">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topBarNavTelaPrincipal"
+            android:id="@+id/topBarNavTelaSecundariaBack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/menu_tela_principal_top_bar"
             app:title="Serviço Shop"
-            />
+            app:navigationIcon="@drawable/baseline_arrow_back"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/botNavgationTelaPrincipal"
-        android:id="@+id/TelaPrincipalFlameContainer"
-        android:layout_below="@id/appBarLayoutTopMenuPrincipal"/>
+        android:layout_above="@id/botNavgationTelaSecundaria"
+        android:id="@+id/TelaSecundariaFlameContainer"
+        android:layout_below="@id/appBarLayoutTopTelaSecundaria"/>
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPagTelaPrincipal"
+        android:id="@+id/viewPagTelaSecundaria"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/botNavgationTelaPrincipal"
-        android:layout_below="@id/appBarLayoutTopMenuPrincipal"/>
+        android:layout_above="@id/botNavgationTelaSecundaria"
+        android:layout_below="@id/appBarLayoutTopTelaSecundaria"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
-        android:id="@+id/botNavgationTelaPrincipal"
+        android:id="@+id/botNavgationTelaSecundaria"
         android:layout_height="wrap_content"
         app:menu="@menu/menu_tela_principal"
         android:layout_alignParentBottom="true"/>
