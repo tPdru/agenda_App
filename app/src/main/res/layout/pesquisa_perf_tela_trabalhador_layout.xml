@@ -33,6 +33,14 @@
             android:layout_gravity="right"
             android:layout_height="30dp"
             android:src="#FFC107" />
+        <TextView
+            android:id="@+id/txtAvaliacaoPerfilPJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="9.5"
+            android:textSize="25sp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -55,6 +63,16 @@
             android:layout_gravity="center_horizontal"
             android:text="Carlão Santos"
             android:textSize="32sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:id="@+id/cardServicos"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="405dp"
+            android:layout_height="match_parent"
+            android:id="@+id/comentarios"/>
 
 
 
