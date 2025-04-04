@@ -102,4 +102,5 @@ public class TelaPrincipalActivity extends AppCompatActivity {
             }
         });
     }
+
 }

@@ -20,25 +20,40 @@
             app:navigationIcon="@drawable/baseline_arrow_back"/>
     </com.google.android.material.appbar.AppBarLayout>
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutTelaSecundaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBarLayoutTopTelaSecundaria">
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabItemAgendaPJ"
+            android:text="agenda"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabItemTestePJ"
+            android:text="Teste"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabItemPerfilEdit"
+            android:text="Perfil"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/botNavgationTelaSecundaria"
         android:id="@+id/TelaSecundariaFlameContainer"
-        android:layout_below="@id/appBarLayoutTopTelaSecundaria"/>
+        android:layout_below="@id/tabLayoutTelaSecundaria"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPagTelaSecundaria"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/botNavgationTelaSecundaria"
-        android:layout_below="@id/appBarLayoutTopTelaSecundaria"/>
+        android:layout_below="@id/tabLayoutTelaSecundaria"/>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:id="@+id/botNavgationTelaSecundaria"
-        android:layout_height="wrap_content"
-        app:menu="@menu/menu_tela_principal"
-        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

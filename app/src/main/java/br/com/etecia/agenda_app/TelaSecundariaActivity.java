@@ -13,6 +13,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 public class TelaSecundariaActivity extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class TelaSecundariaActivity extends AppCompatActivity {
 
     ViewPager2 view_pager_tela_secundaria;
     AdaptadorTelaSecundaria adaptador_tela_secundaria;
-    BottomNavigationView bot_nav_Tela_secundaria;
+    TabLayout tab_layout_tela_secunaria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +47,55 @@ public class TelaSecundariaActivity extends AppCompatActivity {
 
         //Apresentação XML + JAVA
         view_pager_tela_secundaria = findViewById(R.id.viewPagTelaSecundaria);
-        bot_nav_Tela_secundaria = findViewById(R.id.botNavgationTelaSecundaria);
+        tab_layout_tela_secunaria = findViewById(R.id.tabLayoutTelaSecundaria);
         //Instanciando
         adaptador_tela_secundaria = new AdaptadorTelaSecundaria(this);
 
 
+        tab_layout_tela_secunaria.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()){
+                    case 0:
+                        view_pager_tela_secundaria.setCurrentItem(0);
+                        break;
+                    case 1:
+                        view_pager_tela_secundaria.setCurrentItem(1);
+                        break;
+                    case 2:
+                        view_pager_tela_secundaria.setCurrentItem(2);
+                        break;
+                }
 
+                //view_pager_tela_secundaria.setCurrentItem(tab.getPosition());
+            }
 
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        view_pager_tela_secundaria.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                if (position == 0) {
+                    
+                } else if (position == 1) {
+
+                } else if (position == 2) {
+
+                }
+            }
+        });
 
 
     }
+
 }
