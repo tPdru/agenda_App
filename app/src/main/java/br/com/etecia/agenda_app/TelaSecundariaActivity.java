@@ -85,13 +85,7 @@ public class TelaSecundariaActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                if (position == 0) {
-                    
-                } else if (position == 1) {
-
-                } else if (position == 2) {
-
-                }
+                tab_layout_tela_secunaria.getTabAt(position);
             }
         });
 
