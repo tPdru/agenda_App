@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo"
+    android:orientation="vertical"
+    tools:context=".AgendamentoLocalPjActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutTelaTrabalhador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/principal">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topBarNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/baseline_arrow_back" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="375dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:hint="Nome"
+        android:textColorHint="@color/black"
+        android:textSize="25sp"
+        app:boxBackgroundColor="@color/detalhes"
+        app:boxStrokeColor="@color/black"
+        app:cursorColor="@color/black"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtNovoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cardServicos"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cardListaServicos"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+
+</LinearLayout>
