@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +34,6 @@ public class AgendaFragment extends Fragment {
         adicionarAgendado("Pessoa 3", "Sombrancelha");
         adicionarAgendado("Pessoa 4", "Pintar cabelo");
         adicionarAgendado("Pessoa 5", "Corte");
-
 
 
 

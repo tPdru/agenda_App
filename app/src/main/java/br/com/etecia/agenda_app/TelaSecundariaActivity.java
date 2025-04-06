@@ -50,24 +50,14 @@ public class TelaSecundariaActivity extends AppCompatActivity {
         tab_layout_tela_secunaria = findViewById(R.id.tabLayoutTelaSecundaria);
         //Instanciando
         adaptador_tela_secundaria = new AdaptadorTelaSecundaria(this);
+        view_pager_tela_secundaria.setAdapter(adaptador_tela_secundaria);
 
 
         tab_layout_tela_secunaria.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                switch (tab.getPosition()){
-                    case 0:
-                        view_pager_tela_secundaria.setCurrentItem(0);
-                        break;
-                    case 1:
-                        view_pager_tela_secundaria.setCurrentItem(1);
-                        break;
-                    case 2:
-                        view_pager_tela_secundaria.setCurrentItem(2);
-                        break;
-                }
-
-                //view_pager_tela_secundaria.setCurrentItem(tab.getPosition());
+                //passa para a view pager o numero correspondete a escolha do usuario
+                view_pager_tela_secundaria.setCurrentItem(tab.getPosition());
             }
 
             @Override
@@ -85,13 +75,9 @@ public class TelaSecundariaActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                if (position == 0) {
-                    
-                } else if (position == 1) {
-
-                } else if (position == 2) {
-
-                }
+                //pega atab que foi mudada atravez do arrastar da tela e passa para o TAB
+                //para manter ambos simcronizados
+                tab_layout_tela_secunaria.selectTab(tab_layout_tela_secunaria.getTabAt(position));
             }
         });
 

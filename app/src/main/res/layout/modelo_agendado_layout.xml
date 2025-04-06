@@ -9,7 +9,7 @@
         android:orientation="horizontal"
         android:background="#1530A9">
         <ImageView
-            android:id="@+id/idFotodoServico"
+            android:id="@+id/imgfoto"
             android:layout_width="120dp"
             android:layout_height="150dp"
             android:src="#2c2c2c"/>
@@ -34,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:text="Serviço: "
+                android:id="@+id/txtServicoAgendado"
                 android:textColor="#FDFDFD"
                 />
             <TextView
