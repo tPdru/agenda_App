@@ -1,64 +1,71 @@
 package br.com.etecia.agenda_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TelaSecundariaCriarServicoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class TelaSecundariaCriarServicoFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public TelaSecundariaCriarServicoFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment TelaSecundariaCriarServicoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static TelaSecundariaCriarServicoFragment newInstance(String param1, String param2) {
-        TelaSecundariaCriarServicoFragment fragment = new TelaSecundariaCriarServicoFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    Button btn_novo_servico;
+    List<ObjServico> lista_servicos;
+    RecyclerView recycler_view;
+    AdaptadorServicos adaptador_servicos;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tela_secundaria_criar_servico_layout, container, false);
+        View view = inflater.inflate(R.layout.fragment_tela_secundaria_criar_servico_layout, container, false);
+
+        //ligaçoes XML + JAVA
+        btn_novo_servico = view.findViewById(R.id.btnTelaSecundariaNovoServico);
+        recycler_view = view.findViewById(R.id.recTelaSecundariaServicos);
+
+        //instancias
+        lista_servicos = new ArrayList<>();
+        adaptador_servicos = new AdaptadorServicos(getContext(),lista_servicos);
+
+        //Adicionando objetos
+        adicionarServico("teste 1", 30.99f);
+        adicionarServico("teste 2", 40.99f);
+        adicionarServico("teste 3", 10.99f);
+        adicionarServico("teste 4", 300.99f);
+        adicionarServico("teste 5", 60.99f);
+        adicionarServico("teste 6", 99.99f);
+
+        //Configuraçao recycleView
+        recycler_view.setLayoutManager(new GridLayoutManager(getContext(),2));
+
+        //Ligando adaptador + recycleView
+        recycler_view.setAdapter(adaptador_servicos);
+
+        //Usando o botao para chamar a tela de adicionar serviço
+        btn_novo_servico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), CadastrarServicoActivity.class));
+            }
+        });
+
+        return view;
+    }
+
+    //Função de adicionar itens ao recycleView
+    private void adicionarServico(String nome, float valor){
+        String nome_form = "Nome: " + nome;
+        String valor_form = "Valor: " + valor;
+        lista_servicos.add(
+                new ObjServico(nome_form, valor_form)
+        );
     }
 }

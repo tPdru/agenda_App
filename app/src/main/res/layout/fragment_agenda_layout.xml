@@ -18,6 +18,7 @@
         <Button
             android:layout_width="120dp"
             android:layout_height="48dp"
+            android:id="@+id/btnTesteDia"
             android:text="Dia"
             android:backgroundTint="#4285F4"
             android:textColor="#FFFFFF"

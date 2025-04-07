@@ -33,7 +33,7 @@ public class CadastrarServicoActivity extends AppCompatActivity {
         material_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), TelaPrincipalActivity.class));
+                startActivity(new Intent(getApplicationContext(), TelaSecundariaActivity.class));
                 finish();
             }
         });

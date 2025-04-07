@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.material.datepicker.MaterialDatePicker;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,9 +26,9 @@ public class AgendaFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_agenda_layout, container, false);
 
+
         //Apresentando xml/JAVA
         recyclerView = view.findViewById(R.id.recTelaAgenda);
-
 
         //Aicionando itens a lista
         adicionarAgendado("Pessoa 1", "Barba");
@@ -34,7 +36,6 @@ public class AgendaFragment extends Fragment {
         adicionarAgendado("Pessoa 3", "Sombrancelha");
         adicionarAgendado("Pessoa 4", "Pintar cabelo");
         adicionarAgendado("Pessoa 5", "Corte");
-
 
 
         //Instanciando adaptador para gerenciar a lista
