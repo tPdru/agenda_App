@@ -1,6 +1,7 @@
 package br.com.etecia.agenda_app;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,8 +33,22 @@ public class AdaptadorServicos extends RecyclerView.Adapter<AdaptadorServicos.Vi
 
     @Override
     public void onBindViewHolder(@NonNull AdaptadorServicos.ViewHolder holder, int position) {
+        ObjServico item = lista_servicos.get(position);
         holder.nome_servico.setText(lista_servicos.get(position).getNome_servico());
         holder.valor_servico.setText(lista_servicos.get(position).getValor_servico());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //pegando o contexto do item clicado
+                Intent intent = new Intent(v.getContext(), VerMaisSobreServioActivity.class);
+                //salvando as informaçoes do serviço escolhido
+                intent.putExtra("nomeServico",lista_servicos.get(position).nome_servico);
+                intent.putExtra("valorServico", lista_servicos.get(position).valor_servico);
+                //iniciando a nova activity
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

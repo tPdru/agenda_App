@@ -6,10 +6,20 @@
     tools:context=".PesquisaPerfFragment">
 
 
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btnMeuPerfil"
+        android:layout_height="150dp"
+        android:text="Meu Perfil"
+        android:textSize="@dimen/textoGrande"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pesquisar Perfis"
+        android:layout_below="@id/btnMeuPerfil"
         android:textSize="26sp"
         android:layout_marginTop="10dp"
         android:id="@+id/Temporario"

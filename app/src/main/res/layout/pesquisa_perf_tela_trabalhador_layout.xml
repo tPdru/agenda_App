@@ -15,7 +15,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topBarNav"
+            android:id="@+id/materialTopBarPerfilTrabalhador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/baseline_arrow_back"
@@ -63,6 +63,11 @@
             android:layout_gravity="center_horizontal"
             android:text="Carlão Santos"
             android:textSize="32sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="+NOVO"
+            android:id="@+id/btnNovoAgendamentoLocal"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -74,9 +79,7 @@
             android:layout_height="match_parent"
             android:id="@+id/comentarios"/>
 
-
-
-
     </LinearLayout>
+
 
 </LinearLayout>

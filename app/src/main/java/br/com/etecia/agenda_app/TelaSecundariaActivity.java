@@ -34,6 +34,10 @@ public class TelaSecundariaActivity extends AppCompatActivity {
             return insets;
         });
 
+        //pegando informaçoes do intent
+        int tab_pag_escolhida = getIntent().getIntExtra("voltarVerMais", 0);
+
+
         //Apresentação XML + JAVA
         mate_top_bar_secundaria = findViewById(R.id.topBarNavTelaSecundariaBack);
         //Ativando a seta de navegação para voltar
@@ -52,6 +56,10 @@ public class TelaSecundariaActivity extends AppCompatActivity {
         adaptador_tela_secundaria = new AdaptadorTelaSecundaria(this);
         view_pager_tela_secundaria.setAdapter(adaptador_tela_secundaria);
 
+        //setando a aba selecionada caso ela venha de um caminho diferente
+        view_pager_tela_secundaria.setCurrentItem(tab_pag_escolhida, false);
+        //SIMCRONIZANDO O TABlAYOUT
+        tab_layout_tela_secunaria.selectTab(tab_layout_tela_secunaria.getTabAt(tab_pag_escolhida));
 
         tab_layout_tela_secunaria.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

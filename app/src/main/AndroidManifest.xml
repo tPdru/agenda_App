@@ -19,6 +19,9 @@
             android:name=".VerMaisSobreServioActivity"
             android:exported="false" />
         <activity
+            android:name=".PesquisaPerfTelaTrabalhadorActivity"
+            android:exported="false" />
+        <activity
             android:name=".AgendarServicoActivity"
             android:exported="false" />
         <activity
