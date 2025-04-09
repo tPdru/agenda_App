@@ -12,11 +12,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
 
     MaterialToolbar matoobar_perfil_trabalhador;
-    Button btn_novo_agendamento_local;
+    FloatingActionButton id_fab_adicionar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
 
         // Apresentação XML + JAVA
         matoobar_perfil_trabalhador = findViewById(R.id.materialTopBarPerfilTrabalhador);
-        btn_novo_agendamento_local = findViewById(R.id.btnNovoAgendamentoLocal);
+        id_fab_adicionar = findViewById(R.id.id_fab_adicionar);
 
         //Ligando arow back
         matoobar_perfil_trabalhador.setNavigationOnClickListener(new View.OnClickListener() {
@@ -43,7 +44,7 @@ public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
         });
 
         //Chamando a tela de agendamento local
-        btn_novo_agendamento_local.setOnClickListener(new View.OnClickListener() {
+        id_fab_adicionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), AgendamentoLocalPjActivity.class));

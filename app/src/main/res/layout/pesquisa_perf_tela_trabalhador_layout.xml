@@ -32,7 +32,9 @@
             android:layout_width="30dp"
             android:layout_gravity="right"
             android:layout_height="30dp"
-            android:src="#FFC107" />
+            android:layout_margin="5dp"
+            android:src="@drawable/baseline_avaliacao"/>
+
         <TextView
             android:id="@+id/txtAvaliacaoPerfilPJ"
             android:layout_width="wrap_content"
@@ -51,10 +53,11 @@
 
         <ImageView
             android:id="@+id/imgFotoPerfilPesquisa"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
-            android:src="#2c2c2c" />
+            android:src="@drawable/baseline_perfil"
+            />
 
         <TextView
             android:id="@+id/txtNomePerfilPesquisa"
@@ -62,22 +65,37 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Carlão Santos"
-            android:textSize="32sp" />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="+NOVO"
-            android:id="@+id/btnNovoAgendamentoLocal"/>
+            android:textSize="32sp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="280dp"
             android:id="@+id/cardServicos"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="405dp"
-            android:layout_height="match_parent"
-            android:id="@+id/comentarios"/>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/id_fab_adicionar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:src="@drawable/baseline_adicionar"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/comentarios"
+                android:background="#2c2c2c"
+                />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
 
     </LinearLayout>
 
