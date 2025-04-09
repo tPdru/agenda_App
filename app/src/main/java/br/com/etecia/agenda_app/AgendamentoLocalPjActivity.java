@@ -3,6 +3,7 @@ package br.com.etecia.agenda_app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import com.google.android.material.appbar.MaterialToolbar;
 public class AgendamentoLocalPjActivity extends AppCompatActivity {
 
     MaterialToolbar matoobar_agendamento_local;
+    Button btn_agendar_data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class AgendamentoLocalPjActivity extends AppCompatActivity {
 
         //Apresentação XML + JAVA
         matoobar_agendamento_local = findViewById(R.id.topBarNavTrabalhadorAjendamentoLocal);
+        btn_agendar_data = findViewById(R.id.btnAgendarDataPj);
 
         // Ativando a arow back
         matoobar_agendamento_local.setNavigationOnClickListener(new View.OnClickListener() {
@@ -36,6 +39,14 @@ public class AgendamentoLocalPjActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), PesquisaPerfTelaTrabalhadorActivity.class));
                 finish();
+            }
+        });
+
+        //Botão de agendamento
+        btn_agendar_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
