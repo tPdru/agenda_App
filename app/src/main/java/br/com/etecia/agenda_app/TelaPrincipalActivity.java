@@ -36,33 +36,30 @@ public class TelaPrincipalActivity extends AppCompatActivity {
 
         //Apresentando XML + JAVA
         mate_top_bar_items = findViewById(R.id.topBarNavTelaPrincipal);
-        //Pegando a opção que o usuario clicou e chamando a activit correspondente
-        mate_top_bar_items.setOnMenuItemClickListener(item -> {
-            if (item.getItemId() == R.id.menuItemtopBarPerfil) {
-                startActivity(new Intent(getApplicationContext(),TelaSecundariaActivity.class));
-                //finish();
-                return true;
-            } else if (item.getItemId() == R.id.menuItemtopBarCarrinho) {
-                startActivity(new Intent(getApplicationContext(),TelaSecundariaActivity.class));
-                finish();
-                return true;
-            }
-            return true;
-        });
-
-
-
-
-
-        //Apresentando variaveis, JAVA + Xml
         bot_nav_tela_principal = findViewById(R.id.botNavgationTelaPrincipal);
         view_pager_tela_principal = findViewById(R.id.viewPagTelaPrincipal);
+
         //Instanciando
         adaptador_tela_principal = new AdaptadorTelaPrincipal(this);
 
         //Ligando viewPager e adaptador
         view_pager_tela_principal.setAdapter(adaptador_tela_principal);
 
+
+
+        //Pegando a opção que o usuario clicou e chamando a activit correspondente
+        //Botoes top bar: CArrinho e Perfil
+        mate_top_bar_items.setOnMenuItemClickListener(item -> {
+            if (item.getItemId() == R.id.menuItemtopBarPerfil) {
+                startActivity(new Intent(getApplicationContext(),TelaSecundariaActivity.class));
+                return true;
+            } else if (item.getItemId() == R.id.menuItemtopBarCarrinho) {
+                view_pager_tela_principal.setCurrentItem(2);
+
+                return true;
+            }
+            return true;
+        });
 
 
         //Pega o toque para saber qual tela foi escolhida pelo usuário.
@@ -78,10 +75,7 @@ public class TelaPrincipalActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.menuPrincipalServico) {
                 view_pager_tela_principal.setCurrentItem(2);
 
-            } else if (item.getItemId() == R.id.menuPrincipalPerfil) {
-                view_pager_tela_principal.setCurrentItem(3);
             }
-
             return true;
         });
 
@@ -96,8 +90,6 @@ public class TelaPrincipalActivity extends AppCompatActivity {
                     bot_nav_tela_principal.setSelectedItemId(R.id.menuPrincipalAgenda);
                 } else if (position == 2) {
                     bot_nav_tela_principal.setSelectedItemId(R.id.menuPrincipalServico);
-                } else if (position == 3) {
-                    bot_nav_tela_principal.setSelectedItemId(R.id.menuPrincipalPerfil);
                 }
             }
         });

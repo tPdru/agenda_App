@@ -16,8 +16,4 @@
         android:enabled="true"
         android:id="@+id/menuPrincipalServico"/>
 
-    <item
-        android:title="Perfil"
-        android:enabled="true"
-        android:id="@+id/menuPrincipalPerfil"/>
 </menu>

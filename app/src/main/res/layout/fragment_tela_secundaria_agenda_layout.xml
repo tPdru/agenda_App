@@ -20,8 +20,16 @@
         <Button
             android:id="@+id/btnData"
             android:layout_width="150dp"
+            android:layout_margin="5dp"
             android:layout_height="wrap_content"
             android:text="Data" />
+        <Button
+            android:id="@+id/btnHora"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Hora"
+            android:layout_margin="5dp"/>
+
 
     </LinearLayout>
 

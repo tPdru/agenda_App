@@ -20,14 +20,12 @@ public class AdaptadorTelaPrincipal extends FragmentStateAdapter {
                 return new AgendaFragment();
             case 2:
                 return  new ServicoFragment();
-            case 3:
-                return new PerfilFragment();
         }
         return null;
     }
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 3;
     }
 }

@@ -2,12 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:title="CON"
-        android:id="@+id/menuItemtopBarPerfil"
-        app:showAsAction="ifRoom"/>
-    <item
         android:title="CAR"
         android:id="@+id/menuItemtopBarCarrinho"
         app:showAsAction="ifRoom"/>
+    <item
+        android:title="CON"
+        android:id="@+id/menuItemtopBarPerfil"
+        app:showAsAction="ifRoom"/>
+
 
 </menu>
