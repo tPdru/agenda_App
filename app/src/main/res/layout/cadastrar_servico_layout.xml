@@ -34,18 +34,18 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:hint="Nome do serviço"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         android:textSize="25sp"
         app:boxBackgroundColor="#C5E8FF"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
         app:endIconMode="clear_text"
-        app:hintTextColor="@color/black">
+        app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/black"
+            android:textColor="@color/cor_preto"
             android:textSize="25sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -56,18 +56,18 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:hint="Valor"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         android:textSize="25sp"
         app:boxBackgroundColor="#C5E8FF"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
         app:endIconMode="clear_text"
-        app:hintTextColor="@color/black">
+        app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/black"
+            android:textColor="@color/cor_preto"
             android:textSize="25sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -78,18 +78,18 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:hint="Tempo estimado"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         android:textSize="25sp"
         app:boxBackgroundColor="#C5E8FF"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
         app:endIconMode="clear_text"
-        app:hintTextColor="@color/black">
+        app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/black"
+            android:textColor="@color/cor_preto"
             android:textSize="25sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -100,18 +100,18 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:hint="Descrição do serviço"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         android:textSize="25sp"
         app:boxBackgroundColor="#C5E8FF"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
         app:endIconMode="clear_text"
-        app:hintTextColor="@color/black">
+        app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/black"
+            android:textColor="@color/cor_preto"
             android:textSize="25sp" />
 
     </com.google.android.material.textfield.TextInputLayout>

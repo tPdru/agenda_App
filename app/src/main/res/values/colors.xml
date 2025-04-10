@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="fundo">#161515</color>
-    <color name="principal">#3289D1</color>
-    <color name="secundaria">#0D4871</color>
-    <color name="detalhes">#9E9E9E</color>
-    <color name="verde">#A0E657</color>
-    <color name="vermelho">#E24141</color>
-    <color name="amarelo">#E6BF4A</color>
-    <color name="black">#000000</color>
-    <color name="branco">#FFFFFF</color>
+    <color name="cor_fundo">#161515</color>
+    <color name="cor_principal">#3289D1</color>
+    <color name="cor_secundaria">#0D4871</color>
+    <color name="cor_detalhes">#9E9E9E</color>
+    <color name="cor_verde">#A0E657</color>
+    <color name="cor_vermelho">#E24141</color>
+    <color name="cor_amarelo">#E6BF4A</color>
+    <color name="cor_preto">#000000</color>
+    <color name="cor_branco">#FFFFFF</color>
 </resources>

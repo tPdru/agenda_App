@@ -22,19 +22,19 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:hint="Usuário"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         app:boxBackgroundColor="#C5E8FF"
         android:textSize="25sp"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
-        app:hintTextColor="@color/black">
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
+        app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtUsuario"
             android:layout_width="match_parent"
             android:textSize="25sp"
             android:layout_height="match_parent"
-            android:textColor="@color/black" />
+            android:textColor="@color/cor_preto" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -45,12 +45,12 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:hint="Senha"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         app:boxBackgroundColor="#C5E8FF"
         android:textSize="25sp"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
-        app:hintTextColor="@color/black">
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
+        app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtSenha"
@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="25sp"
-            android:textColor="@color/black" />
+            android:textColor="@color/cor_preto" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,7 +82,7 @@
         android:layout_gravity="center_horizontal"
         android:textSize="25sp"
         android:text="Esqueceu a senha?"
-        android:textColor="@color/black"/>
+        android:textColor="@color/cor_preto"/>
 
     <Button
         android:id="@+id/btnCriarConta"
@@ -93,7 +93,7 @@
         android:layout_marginTop="150dp"
         android:textSize="25sp"
         android:text="Criar conta"
-        android:textColor="@color/black"
+        android:textColor="@color/cor_preto"
         />
 
 </LinearLayout>

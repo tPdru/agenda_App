@@ -37,19 +37,19 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:hint="Nome"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         android:textSize="25sp"
         app:boxBackgroundColor="#C5E8FF"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
         app:endIconMode="clear_text"
-        app:hintTextColor="@color/black">
+        app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtNovoUsuario"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/black"
+            android:textColor="@color/cor_preto"
             android:textSize="25sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -60,19 +60,19 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:hint="E-mail"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         android:textSize="25sp"
         app:boxBackgroundColor="#C5E8FF"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
         app:endIconMode="clear_text"
-        app:hintTextColor="@color/black">
+        app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtNovoEmail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/black"
+            android:textColor="@color/cor_preto"
             android:textSize="25sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -83,20 +83,20 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:hint="Senha"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         android:textSize="25sp"
         app:boxBackgroundColor="#C5E8FF"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
         app:endIconMode="password_toggle"
-        app:hintTextColor="@color/black">
+        app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtNovaSenha"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
-            android:textColor="@color/black"
+            android:textColor="@color/cor_preto"
             android:textSize="25sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -107,20 +107,20 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:hint="Confirmar Senha"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         android:textSize="25sp"
         app:boxBackgroundColor="#C5E8FF"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
         app:endIconMode="password_toggle"
-        app:hintTextColor="@color/black">
+        app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtConfirmarSenha"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
-            android:textColor="@color/black"
+            android:textColor="@color/cor_preto"
             android:textSize="25sp" />
 
     </com.google.android.material.textfield.TextInputLayout>

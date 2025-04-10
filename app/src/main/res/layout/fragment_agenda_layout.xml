@@ -4,16 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#7B8E9D"
+    android:background="@color/cor_fundo"
     tools:context=".AgendaFragment">
 
     <!-- Barra Superior -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="#000000"
-        android:gravity="center"
-        >
+        android:background="@color/cor_fundo"
+        android:gravity="center">
 
         <Button
             android:layout_width="120dp"
@@ -23,8 +22,7 @@
             android:backgroundTint="#4285F4"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:layout_marginEnd="37dp"
-            />
+            android:layout_marginEnd="37dp"/>
 
         <Button
             android:layout_width="120dp"
@@ -32,7 +30,7 @@
             android:text="Mês"
             android:backgroundTint="#4285F4"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="16sp"/>
 
     </LinearLayout>
 
@@ -47,66 +45,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/recTelaAgenda"
-            android:background="#000"
+            android:background="@color/cor_fundo"
             android:paddingEnd="24dp"/>
-
-
-        <!-- Botões sobre a RecyclerView -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="16dp"
-            android:background="@android:color/transparent"
-            android:layout_gravity="center_horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Horários"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_gravity="start"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:text="Serviços 1"
-                android:backgroundTint="#4285F4"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:text="Serviço 2"
-                android:backgroundTint="#EA4335"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:text="Serviço 3"
-                android:backgroundTint="#F4B400"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:text="Serviços 4"
-                android:backgroundTint="#EA4335"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp" />
-
-        </LinearLayout>
 
     </FrameLayout>
 

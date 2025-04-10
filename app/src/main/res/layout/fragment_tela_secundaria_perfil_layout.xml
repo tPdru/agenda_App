@@ -1,47 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".TelaSecundariaPerfilFragment"
-    android:background="@color/black">
+    android:background="@color/cor_preto"
+    tools:context=".TelaSecundariaPerfilFragment">
 
     <Button
         android:layout_width="300dp"
         android:layout_height="79dp"
-        android:text="Configurar como trabalho/virar PJ"
-        android:backgroundTint="@color/principal"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:layout_marginTop="34dp"
         android:layout_marginLeft="31dp"
-        />
+        android:layout_marginTop="34dp"
+        android:backgroundTint="@color/cor_principal"
+        android:text="Configurar como trabalho/virar PJ"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
     <ImageView
         android:layout_width="205dp"
         android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="130dp"
-        android:src="@drawable/baseline_person" android:background="@color/principal"
-        android:layout_marginLeft="10dp"/>
+        android:background="@color/cor_principal"
+        android:src="@drawable/baseline_person" />
 
     <Button
         android:layout_width="140dp"
         android:layout_height="140dp"
-        android:text="Histórico Serviços Contratados"
-        android:backgroundTint="@color/principal"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:layout_marginLeft="250dp"
         android:layout_marginTop="130dp"
-        android:layout_marginLeft="250dp" />
+        android:backgroundTint="@color/cor_principal"
+        android:text="Histórico Serviços Contratados"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="379dp"
         android:layout_height="36dp"
-        android:layout_marginTop="300dp"
-        android:background="@color/principal"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="300dp"
+        android:background="@color/cor_principal"
         android:hint="Nome"
-        app:boxBackgroundColor="@color/principal"
-        android:textColorHint="@color/branco" />
+        android:textColorHint="@color/cor_branco"
+        app:boxBackgroundColor="@color/cor_principal" />
 
 </FrameLayout>

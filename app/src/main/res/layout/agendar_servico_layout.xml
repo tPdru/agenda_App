@@ -15,12 +15,12 @@
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:hint="Serviço"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         android:textSize="40sp"
         app:boxBackgroundColor="#C5E8FF"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
-        app:hintTextColor="@color/black">
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
+        app:hintTextColor="@color/cor_preto">
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
@@ -50,12 +50,12 @@
         android:layout_height="50dp"
         android:layout_marginTop="25dp"
         android:hint="Telefone"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         android:textSize="25sp"
         app:boxBackgroundColor="#C5E8FF"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
-        app:hintTextColor="@color/black">
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
+        app:hintTextColor="@color/cor_preto">
 
         <AutoCompleteTextView
             android:layout_width="match_parent"

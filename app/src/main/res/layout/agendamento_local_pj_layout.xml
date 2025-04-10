@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fundo"
+    android:background="@color/cor_fundo"
     android:orientation="vertical"
     tools:context=".AgendamentoLocalPjActivity">
 
@@ -13,7 +13,7 @@
         android:id="@+id/appBarLayoutTelaTrabalhador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/principal">
+        android:background="@color/cor_principal">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topBarNavTrabalhadorAjendamentoLocal"
@@ -28,19 +28,19 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:hint="Nome"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/cor_preto"
         android:textSize="25sp"
-        app:boxBackgroundColor="@color/detalhes"
-        app:boxStrokeColor="@color/black"
-        app:cursorColor="@color/black"
+        app:boxBackgroundColor="@color/cor_detalhes"
+        app:boxStrokeColor="@color/cor_preto"
+        app:cursorColor="@color/cor_preto"
         app:endIconMode="clear_text"
-        app:hintTextColor="@color/black">
+        app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtNovoUsuario"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/black"
+            android:textColor="@color/cor_preto"
             android:textSize="25sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
