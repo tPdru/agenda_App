@@ -18,6 +18,7 @@
             android:textSize="30sp" />
 
         <TextView
+            android:maxLines="5"
             android:id="@+id/txtCardComenComentario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

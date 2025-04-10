@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
+    android:background="@color/cor_fundo"
     tools:context=".PesquisaPerfTelaTrabalhadorActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -33,7 +33,7 @@
             android:layout_gravity="right"
             android:layout_height="30dp"
             android:layout_margin="5dp"
-            android:src="@drawable/baseline_star_outline"/>
+            android:src="@drawable/estrela"/>
 
         <TextView
             android:id="@+id/txtAvaliacaoPerfilPJ"
@@ -41,7 +41,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="9.5"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textColor="@color/cor_detalhes"
+            />
 
     </LinearLayout>
 
@@ -65,7 +67,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Carlão Santos"
-            android:textSize="32sp"/>
+            android:textSize="32sp"
+            android:textColor="@color/cor_detalhes"
+            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -78,6 +82,7 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:backgroundTint="@color/cor_principal"
                 android:id="@+id/id_fab_adicionar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
