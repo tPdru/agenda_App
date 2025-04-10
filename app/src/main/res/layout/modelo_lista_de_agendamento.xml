@@ -84,6 +84,36 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_margin="15dp"
+                    android:id="@+id/btnValorAgendamento"
+                    style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    />
+                <Button
+                    android:layout_margin="15dp"
+                    android:id="@+id/btnDataAgendamento"
+                    style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 
