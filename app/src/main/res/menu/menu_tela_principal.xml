@@ -4,16 +4,19 @@
     <item
         android:title="Pesquisa"
         android:enabled="true"
+        android:icon="@drawable/pesquisa"
         android:id="@+id/menuPrincipalPesquisa"/>
 
     <item
         android:title="Agenda"
         android:enabled="true"
+        android:icon="@drawable/baseline_calendar"
         android:id="@+id/menuPrincipalAgenda"/>
 
     <item
         android:title="Serviço"
         android:enabled="true"
+        android:icon="@drawable/lista"
         android:id="@+id/menuPrincipalServico"/>
 
 </menu>
