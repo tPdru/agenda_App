@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+    <LinearLayout
+        android:background="@color/cor_principal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Serviço:"
+            android:textColor="@color/cor_branco"
+            android:layout_margin="5dp"
+            android:id="@+id/txtModRemoveServicoListaNome"
+            android:textSize="@dimen/textoMedio"/>
+        <TextView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cor_branco"
+            android:text="Valor:"
+            android:id="@+id/txtModRemoveServicoListaValor"
+            android:textSize="@dimen/textoMedio"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

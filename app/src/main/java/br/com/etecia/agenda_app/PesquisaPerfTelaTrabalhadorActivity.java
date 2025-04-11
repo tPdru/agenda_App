@@ -10,14 +10,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
 
     MaterialToolbar matoobar_perfil_trabalhador;
     FloatingActionButton id_fab_adicionar;
+    RecyclerView rec_servicos, rec_avaliacoes;
+    List<ObjServico> lista_servicos;
+    List<ObjAvaliacao> lista_avaliacoes;
+    AdaptadorServicos adaptador_servicos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +42,33 @@ public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
         // Apresentação XML + JAVA
         matoobar_perfil_trabalhador = findViewById(R.id.materialTopBarPerfilTrabalhador);
         id_fab_adicionar = findViewById(R.id.id_fab_adicionar);
+        rec_servicos = findViewById(R.id.recServicosAgeLocal);
+        rec_avaliacoes = findViewById(R.id.recAvaliacoesMeuPerfil);
+
+        //Instancias
+        lista_servicos = new ArrayList<>();
+        lista_avaliacoes = new ArrayList<>();
+        adaptador_servicos = new AdaptadorServicos(getApplicationContext(), lista_servicos
+                , AdaptadorServicos.TELA_MEU_PERFIL, new AdaptadorServicos.OnservicoClickLister() {
+            @Override
+            public void onServicoEscolhido(ObjServico escolhido) {
+
+            }
+        });
+
+        //configurando RecycleView
+        rec_servicos.setLayoutManager(new GridLayoutManager(getApplicationContext(),1));
+        rec_servicos.setAdapter(adaptador_servicos);
+
+        //Adicionando dados a lista
+        adicionarServico("teste 1", 30.99f);
+        adicionarServico("teste 2", 40.99f);
+        adicionarServico("teste 3", 10.99f);
+        adicionarServico("teste 4", 300.99f);
+        adicionarServico("teste 5", 60.99f);
+        adicionarServico("teste 6", 99.99f);
+
+
 
         //Ligando arow back
         matoobar_perfil_trabalhador.setNavigationOnClickListener(new View.OnClickListener() {
@@ -51,5 +87,14 @@ public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    //Função de adicionar itens ao recycleView
+    private void adicionarServico(String nome, float valor){
+        String nome_form = "Nome: " + nome;
+        String valor_form = "Valor: " + valor;
+        lista_servicos.add(
+                new ObjServico(nome_form, valor_form)
+        );
     }
 }

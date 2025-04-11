@@ -33,7 +33,13 @@ public class TelaSecundariaCriarServicoFragment extends Fragment {
 
         //instancias
         lista_servicos = new ArrayList<>();
-        adaptador_servicos = new AdaptadorServicos(getContext(),lista_servicos);
+        adaptador_servicos = new AdaptadorServicos(getContext(), lista_servicos
+                , AdaptadorServicos.TELA_EDITAR_SERVICO, new AdaptadorServicos.OnservicoClickLister() {
+            @Override
+            public void onServicoEscolhido(ObjServico escolhido) {
+
+            }
+        });
 
         //Adicionando objetos
         adicionarServico("teste 1", 30.99f);

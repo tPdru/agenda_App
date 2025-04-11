@@ -45,13 +45,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cardServicos"
+        android:id="@+id/recParaEscolhaServicos"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="10dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cardListaServicos"
+        android:id="@+id/recServicosEscolhidos"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="10dp"/>
