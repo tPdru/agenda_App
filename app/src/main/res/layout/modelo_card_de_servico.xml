@@ -2,13 +2,14 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="175dp"
+    app:cardCornerRadius="15dp"
     android:layout_height="250dp"
     android:layout_margin="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#B5DFFF"
+        android:background="@color/cor_principal"
         android:orientation="vertical">
 
         <LinearLayout
@@ -22,7 +23,7 @@
                 android:layout_width="155dp"
                 android:layout_height="130dp"
                 android:layout_gravity="center_horizontal"
-                android:src="#1B1B1B" />
+                android:src="@drawable/foto_imagem" />
 
             <TextView
                 android:id="@+id/txtCardServNomeServico"
@@ -30,8 +31,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="serviço "
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="@color/cor_preto"
+                android:textStyle="bold"
+                android:textSize="@dimen/textoMedio" />
 
             <TextView
                 android:id="@+id/txtCardServValorServico"
@@ -39,8 +41,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="valor "
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="@color/cor_preto"
+                android:textStyle="bold"
+                android:textSize="@dimen/textoMedio" />
 
 
         </LinearLayout>
