@@ -11,6 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.appbar.MaterialToolbar;
@@ -57,7 +58,8 @@ public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
         });
 
         //configurando RecycleView
-        rec_servicos.setLayoutManager(new GridLayoutManager(getApplicationContext(),1));
+        //LinearLayoutManager(já vem por padrão na vertical) modificado para a posição horizontal
+        rec_servicos.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         rec_servicos.setAdapter(adaptador_servicos);
 
         //Adicionando dados a lista

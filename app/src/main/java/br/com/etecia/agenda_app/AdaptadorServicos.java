@@ -61,7 +61,7 @@ public class AdaptadorServicos extends RecyclerView.Adapter<AdaptadorServicos.Vi
                 //Verifica se a posição do item clicado e valida
                 if(pos == RecyclerView.NO_POSITION) return;
 
-                //Caso seja valida continua para ver em qual tela o usuarrio esta etomar a ação correta
+                //Caso seja valida continua para ver em qual tela o usuarrio esta e tomar a ação correta
                 switch (origem){
                     case 0:
                         //pegando o contexto do item clicado

@@ -11,6 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.appbar.MaterialToolbar;
@@ -62,7 +63,7 @@ public class AgendamentoLocalPjActivity extends AppCompatActivity {
                 , AdaptadorEscolhas.TELA_MODELO_lOCAL_AGENDAR);
 
         //Configurando RecycleView
-        rec_servicos.setLayoutManager(new GridLayoutManager(getApplicationContext(),1));
+        rec_servicos.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         rec_servicos.setAdapter(adaptador_servicos);
         rec_servicos_escolhidos.setLayoutManager(new GridLayoutManager(getApplicationContext(),1));
         rec_servicos_escolhidos.setAdapter(adaptador_escolhas);
