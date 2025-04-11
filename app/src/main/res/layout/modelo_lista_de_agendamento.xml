@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
     android:layout_marginTop="15dp"
-    android:layout_height="wrap_content"
     android:padding="15dp">
 
     <LinearLayout
-        android:background="@color/cor_detalhes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/cor_detalhes"
         android:orientation="vertical">
 
         <LinearLayout
@@ -18,10 +18,10 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_marginTop="10dp"
                 android:id="@+id/imgPerfilPJ"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/usuario" />
 
             <TextView
@@ -43,10 +43,10 @@
             <ImageView
                 android:id="@+id/imgAvaliacaoPerfil"
                 android:layout_width="30dp"
-                android:layout_gravity="right"
                 android:layout_height="30dp"
+                android:layout_gravity="right"
                 android:layout_margin="5dp"
-                android:src="@drawable/estrela"/>
+                android:src="@drawable/estrela" />
 
             <TextView
                 android:id="@+id/txtAvaliacaoPerfilPJ"
@@ -54,9 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="9.5"
-                android:textSize="20sp"
                 android:textColor="@color/cor_preto"
-                />
+                android:textSize="20sp" />
         </LinearLayout>
 
 
@@ -70,15 +69,13 @@
                 android:layout_height="match_parent">
 
 
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_margin="15dp"
-                android:padding="10dp"
-                android:layout_height="match_parent"
-                android:id="@+id/cardListaAgendamentoServicos"
-                android:background="@color/cor_principal"
-                />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cardListaAgendamentoServicos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:background="@color/cor_principal"
+                    android:padding="10dp" />
 
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
@@ -91,28 +88,43 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <Button
-                    android:layout_margin="15dp"
                     android:id="@+id/btnValorAgendamento"
-                    style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
                     android:layout_width="170dp"
-                    android:layout_height="40dp"
-                    />
-                <Button
+                    android:layout_height="wrap_content"
                     android:layout_margin="15dp"
+                    android:backgroundTint="@color/cor_principal"
+                    android:text="Valor"
+                    android:textSize="20sp" />
+
+                <Button
                     android:id="@+id/btnDataAgendamento"
-                    style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
                     android:layout_width="170dp"
-                    android:layout_height="40dp"
-                    />
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:backgroundTint="@color/cor_principal"
+                    android:text="Data / hora"
+                    android:textSize="20sp" />
+
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/btnEndereco"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/cor_cinza"
+                android:text="Endereço"
+                android:textColor="@color/cor_preto"
+                android:textSize="20sp" />
+
 
         </LinearLayout>
-
 
 
     </LinearLayout>
