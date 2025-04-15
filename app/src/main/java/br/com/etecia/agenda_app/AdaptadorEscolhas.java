@@ -42,7 +42,7 @@ public class AdaptadorEscolhas extends RecyclerView.Adapter<AdaptadorEscolhas.Vi
     @Override
     public void onBindViewHolder(@NonNull AdaptadorEscolhas.ViewHolder holder, int position) {
         holder.nome.setText(lista_escolhas.get(position).getNome());
-        holder.valor.setText(lista_escolhas.get(position).getValor());
+        holder.valor.setText(String.valueOf(lista_escolhas.get(position).getValor()));
 
     }
 

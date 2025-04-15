@@ -3,10 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:title="CAR"
+        android:icon="@drawable/baseline_calendar_month"
         android:id="@+id/menuItemtopBarCarrinho"
         app:showAsAction="ifRoom"/>
     <item
         android:title="CON"
+        android:icon="@drawable/baseline_co_present"
         android:id="@+id/menuItemtopBarPerfil"
         app:showAsAction="ifRoom"/>
 

@@ -35,7 +35,7 @@ public class TelaSecundariaActivity extends AppCompatActivity {
         });
 
         //pegando informaçoes do intent
-        int tab_pag_escolhida = getIntent().getIntExtra("voltarVerMais", 0);
+        int tab_pag_escolhida = getIntent().getIntExtra("servico_cadastrado", 0);
 
 
         //Apresentação XML + JAVA

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -46,6 +47,7 @@ public class AgendamentoLocalPjActivity extends AppCompatActivity {
     MaterialTimePicker timePicker;
 
     TextInputEditText imp_nome_cliente;
+    TextView txt_valor_total;
 
     TesteInfo teste_info;
 
@@ -66,7 +68,7 @@ public class AgendamentoLocalPjActivity extends AppCompatActivity {
 
 
         //construção data e time piker
-        timePicker = new MaterialTimePicker.Builder().setTimeFormat(TimeFormat.CLOCK_24H)
+        timePicker = new MaterialTimePicker.Builder().setTimeFormat(TimeFormat.CLOCK_12H)
                 .setTitleText("Selecionar Hora").build();
         datepiker = MaterialDatePicker.Builder.datePicker()
                 .setTitleText("Selecionar Dia").build();
@@ -79,6 +81,7 @@ public class AgendamentoLocalPjActivity extends AppCompatActivity {
         rec_servicos = findViewById(R.id.recParaEscolhaServicos);
         rec_servicos_escolhidos = findViewById(R.id.recServicosEscolhidos);
         imp_nome_cliente = findViewById(R.id.txtInpAgendarLocalNome);
+        txt_valor_total = findViewById(R.id.txtagendarLocalVlTotal);
 
         //singleton
         teste_info = TesteInfo.getInstance();
@@ -93,7 +96,7 @@ public class AgendamentoLocalPjActivity extends AppCompatActivity {
             @Override
             public void onServicoEscolhido(ObjServico escolhido) {
                 //Adicionando dados na lista de escolhas
-                adicionarEscolhido(escolhido.nome_servico, escolhido.valor_servico.toString());
+                adicionarEscolhido(escolhido.nome_servico, escolhido.valor_servico);
 
             }
         });
@@ -129,14 +132,21 @@ public class AgendamentoLocalPjActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int lista = lista_escolhas.size();
-                String servicos_cli = lista_escolhas.get(0).getNome();
+                String servicos_cli;
                 if(imp_nome_cliente.getText() == null){
                     teste_info.nome_cli = "Vazio";
                 }else {
                     teste_info.nome_cli = String.valueOf(imp_nome_cliente.getText());
                 }
-                teste_info.servico_cli = servicos_cli;
-                teste_info.valor_cli = lista_escolhas.get(0).getValor();
+                //teste_info.servico_cli = servicos_cli;
+                /*for (int i = 0; i < lista_escolhas.size(); i++){
+                    servicos_cli = lista_escolhas.get(i).getNome();
+                    teste_info.servico_cli += servicos_cli;
+                    teste_info.valor_cli += lista_escolhas.get(i).getValor();
+                }*/
+                servicos_cli = lista_escolhas.get(0).getNome();
+                teste_info.servico_cli += servicos_cli;
+                teste_info.valor_cli += lista_escolhas.get(0).getValor();
                 teste_info.new_item = true;
                 Toast.makeText(AgendamentoLocalPjActivity.this, "Agendado com sucesso!", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(),PesquisaPerfTelaTrabalhadorActivity.class));
@@ -218,11 +228,11 @@ public class AgendamentoLocalPjActivity extends AppCompatActivity {
         );
     }
     //Função adicionar item a escolhas
-    private void adicionarEscolhido(String nome, String valor){
+    private void adicionarEscolhido(String nome, float valor){
         String nome_form = "Nome: " + nome;
         String valor_form = "Valor: " + valor;
         lista_escolhas.add(
-                new ObjServicoRemove(nome_form, valor_form)
+                new ObjServicoRemove(nome, valor)
         );
         //Atualiza o tamanho da lista
         adaptador_escolhas.notifyItemInserted(lista_escolhas.size() - 1);

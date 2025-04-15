@@ -68,7 +68,14 @@ public class CadastrarServicoActivity extends AppCompatActivity {
                 );
                 Toast.makeText(CadastrarServicoActivity.this, "Serviço criado com sucesso!"
                         , Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(), TelaSecundariaActivity.class));
+                //pegando o context e preparando o intente para levarr informaçoes
+                Intent intent = new Intent(getApplicationContext(),TelaSecundariaActivity.class);
+
+                //salvando a informaçao da aba do tabque tem que abrir;
+                intent.putExtra("servico_cadastrado",1);
+                //iniciando a nova activit e fechando esta
+
+                startActivity(intent);
                 finish();
             }
         });

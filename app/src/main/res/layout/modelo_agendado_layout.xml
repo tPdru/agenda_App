@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="120dp"
     android:layout_margin="5dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:background="#1530A9">
+        android:background="@color/cor_principal">
         <ImageView
             android:id="@+id/imgfoto"
             android:layout_width="120dp"
-            android:layout_height="150dp"
+            android:layout_height="120dp"
             android:src="#2c2c2c"/>
 
         <LinearLayout
@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="@dimen/textoGrande"
+                android:textSize="@dimen/textoMedio"
                 android:text="Nome do PJ"
                 android:textColor="#FDFDFD"
                 android:layout_margin="10dp"
@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="@dimen/textoPequeno"
                 android:text="Serviço: "
                 android:id="@+id/txtServicoAgendado"
                 android:textColor="#FDFDFD"
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtModelAgendadoPjValorTotal"
                 android:text="Valor: "
-                android:textSize="20sp"/>
+                android:textSize="@dimen/textoPequeno"/>
 
 
         </LinearLayout>

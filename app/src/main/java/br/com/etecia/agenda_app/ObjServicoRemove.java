@@ -1,10 +1,10 @@
 package br.com.etecia.agenda_app;
 
 public class ObjServicoRemove {
-    String valor;
+    float valor;
     String nome;
 
-    public ObjServicoRemove(String nome, String valor) {
+    public ObjServicoRemove(String nome, float valor) {
         this.nome = nome;
         this.valor = valor;
     }
@@ -17,11 +17,11 @@ public class ObjServicoRemove {
         this.nome = nome;
     }
 
-    public String getValor() {
+    public float getValor() {
         return valor;
     }
 
-    public void setValor(String valor) {
+    public void setValor(float valor) {
         this.valor = valor;
     }
 
