@@ -22,6 +22,8 @@ public class TelaSecundariaCriarServicoFragment extends Fragment {
     RecyclerView recycler_view;
     AdaptadorServicos adaptador_servicos;
 
+    TesteInfo teste_info = TesteInfo.getInstance();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,7 +35,7 @@ public class TelaSecundariaCriarServicoFragment extends Fragment {
 
         //instancias
         lista_servicos = new ArrayList<>();
-        adaptador_servicos = new AdaptadorServicos(getContext(), lista_servicos
+        adaptador_servicos = new AdaptadorServicos(getContext(), teste_info.lista_servico_info
                 , AdaptadorServicos.TELA_EDITAR_SERVICO, new AdaptadorServicos.OnservicoClickLister() {
             @Override
             public void onServicoEscolhido(ObjServico escolhido) {
@@ -42,12 +44,12 @@ public class TelaSecundariaCriarServicoFragment extends Fragment {
         });
 
         //Adicionando objetos
-        adicionarServico("teste 1", 30.99f);
+        /*adicionarServico("teste 1", 30.99f);
         adicionarServico("teste 2", 40.99f);
         adicionarServico("teste 3", 10.99f);
         adicionarServico("teste 4", 300.99f);
         adicionarServico("teste 5", 60.99f);
-        adicionarServico("teste 6", 99.99f);
+        adicionarServico("teste 6", 99.99f);*/
 
         //Configuraçao recycleView
         recycler_view.setLayoutManager(new GridLayoutManager(getContext(),2));
@@ -66,12 +68,4 @@ public class TelaSecundariaCriarServicoFragment extends Fragment {
         return view;
     }
 
-    //Função de adicionar itens ao recycleView
-    private void adicionarServico(String nome, float valor){
-        String nome_form = "Nome: " + nome;
-        String valor_form = "Valor: " + valor;
-        lista_servicos.add(
-                new ObjServico(nome_form, valor_form)
-        );
-    }
 }

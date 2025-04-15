@@ -37,7 +37,7 @@
         app:hintTextColor="@color/cor_preto">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtNovoUsuario"
+            android:id="@+id/txtInpAgendarLocalNome"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/cor_preto"
@@ -54,22 +54,63 @@
         android:id="@+id/recServicosEscolhidos"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp" />
 
-
-
-    <Button
-        android:layout_width="wrap_content"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/textoGrande"
-        android:id="@+id/btnAgendarDataPj"
-        android:layout_margin="10dp"
-        android:text="Agendar"
-        android:layout_gravity="center_horizontal"/>
+        android:fillViewport="true">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
+                <Button
+                    android:id="@+id/btnAgendarLocalDia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:text="Data"
+                    android:textSize="@dimen/textoPequeno" />
 
+                <Button
+                    android:id="@+id/btnAgendarLocalHora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:text="Hora"
+                    android:textSize="@dimen/textoPequeno" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtagendarLocalVlTotal"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Valor Total"
+                android:textColor="@color/cor_branco"
+                android:textSize="@dimen/textoMedio" />
+
+            <Button
+                android:id="@+id/btnAgendarDataPj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:text="Agendar"
+                android:textSize="@dimen/textoGrande" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 
 </LinearLayout>

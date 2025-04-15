@@ -108,8 +108,8 @@
                     android:layout_width="370dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:background="null"
                     android:text="DATA"
+                    android:backgroundTint="@color/cor_principal"
                     android:textSize="@dimen/textoMedio"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -126,7 +126,6 @@
                     android:id="@+id/txtValorAgendamento"
                     android:layout_width="250dp"
                     android:layout_height="50dp"
-                    android:background="null"
                     android:gravity="center_horizontal|center_vertical"
                     android:text="VALOR"
                     android:textColor="@color/cor_branco"
@@ -151,8 +150,8 @@
                         android:id="@+id/btnDescartarAgendamento"
                         android:layout_width="170dp"
                         android:layout_height="wrap_content"
-                        android:background="null"
                         android:text="Descartar"
+                        android:backgroundTint="@color/cor_verde"
                         android:textSize="@dimen/textoMedio" />
                 </LinearLayout>
 
@@ -166,8 +165,8 @@
                         android:id="@+id/btnConcluirAgendamento"
                         android:layout_width="170dp"
                         android:layout_height="wrap_content"
-                        android:background="null"
                         android:text="Agendar"
+                        android:backgroundTint="@color/cor_vermelho"
                         android:textSize="@dimen/textoMedio" />
                 </LinearLayout>
 

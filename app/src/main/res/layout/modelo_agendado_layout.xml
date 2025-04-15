@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="22sp"
+                android:textSize="@dimen/textoGrande"
                 android:text="Nome do PJ"
                 android:textColor="#FDFDFD"
                 android:layout_margin="10dp"
@@ -41,6 +41,7 @@
                 android:textColor="#FDFDFD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/txtModelAgendadoPjValorTotal"
                 android:text="Valor: "
                 android:textSize="20sp"/>
 

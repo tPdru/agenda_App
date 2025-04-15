@@ -26,7 +26,6 @@ public class AdaptadorServicos extends RecyclerView.Adapter<AdaptadorServicos.Vi
     List<ObjServico> lista_servicos;
     private int origem;
 
-    AgendamentoLocalPjActivity ag_local = new AgendamentoLocalPjActivity();
 
 
     public AdaptadorServicos(Context context, List<ObjServico> lista_servicos, int origem, OnservicoClickLister escultar) {
@@ -50,7 +49,7 @@ public class AdaptadorServicos extends RecyclerView.Adapter<AdaptadorServicos.Vi
     public void onBindViewHolder(@NonNull AdaptadorServicos.ViewHolder holder, int position) {
         ObjServico item = lista_servicos.get(position);
         holder.nome_servico.setText(lista_servicos.get(position).getNome_servico());
-        holder.valor_servico.setText(lista_servicos.get(position).getValor_servico());
+        holder.valor_servico.setText(lista_servicos.get(position).getValor_servico().toString());
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -60,12 +59,12 @@ public class AdaptadorServicos extends RecyclerView.Adapter<AdaptadorServicos.Vi
                 int pos = holder.getAdapterPosition();
                 //Verifica se a posição do item clicado e valida
                 if(pos == RecyclerView.NO_POSITION) return;
-
+                Intent intent;
                 //Caso seja valida continua para ver em qual tela o usuarrio esta e tomar a ação correta
                 switch (origem){
                     case 0:
                         //pegando o contexto do item clicado
-                        Intent intent = new Intent(v.getContext(), VerMaisSobreServioActivity.class);
+                        intent = new Intent(v.getContext(), VerMaisSobreServioActivity.class);
                         //salvando as informaçoes do serviço escolhido
                         intent.putExtra("nomeServico",lista_servicos.get(pos).nome_servico);
                         intent.putExtra("valorServico", lista_servicos.get(pos).valor_servico);
@@ -76,13 +75,16 @@ public class AdaptadorServicos extends RecyclerView.Adapter<AdaptadorServicos.Vi
                         Toast.makeText(context, "Editar Serviço", Toast.LENGTH_SHORT).show();
                         break;
                     case 2:
-                        Toast.makeText(context, "Colocar no \"Carrinho\"", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, "Colocar no \"Carrinho\"", Toast.LENGTH_SHORT).show();
                         //pegando o contexto do item clicado
-                        Intent intent1 = new Intent(v.getContext(), AgendamentoLocalPjActivity.class);
+                        intent = new Intent(v.getContext(), AgendamentoLocalPjActivity.class);
                         //salvando as informaçoes do serviço escolhido
-                        intent1.putExtra("nomeEscolhaServ", lista_servicos.get(pos).nome_servico);
-                        intent1.putExtra("valorEscolhaServ", lista_servicos.get(pos).valor_servico);
+                        intent.putExtra("nomeEscolhaServ", lista_servicos.get(pos).getNome_servico());
+                        intent.putExtra("valorEscolhaServ", lista_servicos.get(pos).getValor_servico());
+
+
                         if(escultar != null){
+                            //Passa a informação atravez do onServicoEscolhido
                             escultar.onServicoEscolhido(lista_servicos.get(pos));
                         }
                         break;
@@ -94,13 +96,16 @@ public class AdaptadorServicos extends RecyclerView.Adapter<AdaptadorServicos.Vi
 
     @Override
     public int getItemCount() {
+        //passsar o tamanho da lista
         return lista_servicos.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
+        //variáveis do tipo do modelo que vao ser alteradas
         TextView nome_servico, valor_servico;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            //Apresentação variáveis do modelo
             nome_servico = itemView.findViewById(R.id.txtCardServNomeServico);
             valor_servico = itemView.findViewById(R.id.txtCardServValorServico);
         }
@@ -109,6 +114,12 @@ public class AdaptadorServicos extends RecyclerView.Adapter<AdaptadorServicos.Vi
     //Interface
     public  interface OnservicoClickLister{
         void onServicoEscolhido(ObjServico escolhido);
+    }
+
+    //Atualizar a lista
+    public void atualizarListaServico(List<ObjServico> lista){
+        this.lista_servicos = lista;
+        notifyDataSetChanged();
     }
 
 }

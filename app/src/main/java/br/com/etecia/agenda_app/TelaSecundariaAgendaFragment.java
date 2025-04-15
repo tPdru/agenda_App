@@ -1,8 +1,11 @@
 package br.com.etecia.agenda_app;
 
+import static br.com.etecia.agenda_app.AgendamentoLocalPjActivity.*;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -29,8 +32,10 @@ public class TelaSecundariaAgendaFragment extends Fragment {
     MaterialDatePicker<Long> datepiker;
     MaterialTimePicker timePicker;
     Button btn_date, btn_hora;
-    List<ObjServico> lista_agendados_pj;
+    List<ObjAgendadoPj> lista_agendados_pj;
     RecyclerView rec_view_agenda_pj;
+    AdaptadorAgendaPj adaptador_agenda_pj;
+    TesteInfo teste_info;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,22 +47,35 @@ public class TelaSecundariaAgendaFragment extends Fragment {
         btn_date = view.findViewById(R.id.btnData);
         btn_hora = view.findViewById(R.id.btnHora);
 
-        //instanciando o datepiker e timePiker
+        //singleton
+        teste_info = TesteInfo.getInstance();
+
+
+        //instanciando
         datepiker = new MaterialDatePicker<>();
         timePicker = new MaterialTimePicker();
         lista_agendados_pj = new ArrayList<>();
+        adaptador_agenda_pj = new AdaptadorAgendaPj(getContext(),lista_agendados_pj);
+        //Instancias com metodos
+
+
 
         //construção data e time piker
         datepiker = MaterialDatePicker.Builder.datePicker()
                 .setTitleText("Selecione a data").build();
 
-
         timePicker = new MaterialTimePicker.Builder().setTimeFormat(TimeFormat.CLOCK_12H)
                 .setTitleText("Escolha a Hora").build();
 
+        //Confiruração recycleView
+        rec_view_agenda_pj.setLayoutManager(new GridLayoutManager(getContext(),1));
+        rec_view_agenda_pj.setAdapter(adaptador_agenda_pj);
 
-
-
+        //Testando o recebimento de informações atravez do singleton
+        if(teste_info.new_item){
+            adicionarAgendado(teste_info.nome_cli, teste_info.servico_cli, teste_info.valor_cli);
+            teste_info.new_item = false;
+        }
 
 
         //botão para escolher a data
@@ -114,8 +132,15 @@ public class TelaSecundariaAgendaFragment extends Fragment {
             }
         });
 
-
-
         return view;
+    }
+
+    //Função adicionar na agenda
+    private void adicionarAgendado(String nome, String servico, String valor_total){
+        String servico_formatado = "Seviços: " + servico;
+        lista_agendados_pj.add(
+                new ObjAgendadoPj(R.drawable.foto_usuario,nome,servico_formatado,valor_total)
+        );
+        adaptador_agenda_pj.notifyItemInserted(lista_agendados_pj.size()- 1);
     }
 }

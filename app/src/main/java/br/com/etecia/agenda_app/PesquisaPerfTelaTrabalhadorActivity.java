@@ -29,6 +29,8 @@ public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
     List<ObjAvaliacao> lista_avaliacoes;
     AdaptadorServicos adaptador_servicos;
 
+    TesteInfo teste_info = TesteInfo.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +51,7 @@ public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
         //Instancias
         lista_servicos = new ArrayList<>();
         lista_avaliacoes = new ArrayList<>();
-        adaptador_servicos = new AdaptadorServicos(getApplicationContext(), lista_servicos
+        adaptador_servicos = new AdaptadorServicos(getApplicationContext(), teste_info.lista_servico_info
                 , AdaptadorServicos.TELA_MEU_PERFIL, new AdaptadorServicos.OnservicoClickLister() {
             @Override
             public void onServicoEscolhido(ObjServico escolhido) {
@@ -63,12 +65,12 @@ public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
         rec_servicos.setAdapter(adaptador_servicos);
 
         //Adicionando dados a lista
-        adicionarServico("teste 1", 30.99f);
+        /*adicionarServico("teste 1", 30.99f);
         adicionarServico("teste 2", 40.99f);
         adicionarServico("teste 3", 10.99f);
         adicionarServico("teste 4", 300.99f);
         adicionarServico("teste 5", 60.99f);
-        adicionarServico("teste 6", 99.99f);
+        adicionarServico("teste 6", 99.99f);*/
 
 
 
@@ -91,12 +93,4 @@ public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
 
     }
 
-    //Função de adicionar itens ao recycleView
-    private void adicionarServico(String nome, float valor){
-        String nome_form = "Nome: " + nome;
-        String valor_form = "Valor: " + valor;
-        lista_servicos.add(
-                new ObjServico(nome_form, valor_form)
-        );
-    }
 }

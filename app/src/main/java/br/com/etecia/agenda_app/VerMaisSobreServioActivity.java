@@ -50,10 +50,12 @@ public class VerMaisSobreServioActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //pegando o context e preparando o intente para levarr informaçoes
-                Intent intent = new Intent(getApplicationContext(),TelaSecundariaActivity.class);
+                Intent intent = new Intent(getApplicationContext(),PesquisaPerfTelaTrabalhadorActivity.class);
+                /* Exmplo de salvar no Intent
                 //salvando a informaçao da aba do tabque tem que abrir;
                 intent.putExtra("voltarVerMais",1);
                 //iniciando a nova activit e fechando esta
+                 */
                 startActivity(intent);
                 finish();
             }
