@@ -51,7 +51,7 @@ public class PesquisaPerfTelaTrabalhadorActivity extends AppCompatActivity {
         //Instancias
         lista_servicos = new ArrayList<>();
         lista_avaliacoes = new ArrayList<>();
-        adaptador_servicos = new AdaptadorServicos(getApplicationContext(), teste_info.lista_servico_info
+        adaptador_servicos = new AdaptadorServicos(PesquisaPerfTelaTrabalhadorActivity.this, teste_info.lista_servico_info
                 , AdaptadorServicos.TELA_MEU_PERFIL, new AdaptadorServicos.OnservicoClickLister() {
             @Override
             public void onServicoEscolhido(ObjServico escolhido) {

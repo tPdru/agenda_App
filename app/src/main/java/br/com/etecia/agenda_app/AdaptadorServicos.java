@@ -64,12 +64,12 @@ public class AdaptadorServicos extends RecyclerView.Adapter<AdaptadorServicos.Vi
                 switch (origem){
                     case 0:
                         //pegando o contexto do item clicado
-                        intent = new Intent(v.getContext(), VerMaisSobreServioActivity.class);
+                        intent = new Intent(context, VerMaisSobreServioActivity.class);
                         //salvando as informaçoes do serviço escolhido
                         intent.putExtra("nomeServico",lista_servicos.get(pos).nome_servico);
                         intent.putExtra("valorServico", lista_servicos.get(pos).valor_servico);
                         //iniciando a nova activity
-                        v.getContext().startActivity(intent);
+                        context.startActivity(intent);
                         break;
                     case 1:
                         Toast.makeText(context, "Editar Serviço", Toast.LENGTH_SHORT).show();
