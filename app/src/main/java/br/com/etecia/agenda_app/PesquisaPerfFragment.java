@@ -36,16 +36,13 @@ public class PesquisaPerfFragment extends Fragment {
 
         //Apresentação de XML + JAVA
         recyclerView = view.findViewById(R.id.recPerfisTelaPesquisa);
-        btn_meu_perfil = view.findViewById(R.id.btnMeuPerfil);
-        card_meu_perfil = view.findViewById(R.id.cardMeuPerfil);
-        linear_Layout_meu_peril = view.findViewById(R.id.layoutBtnMeuPerfil);
 
 
         //instancias
         AdaptadorPerfilPesquisa adaptadorPerfilPesquisa = new AdaptadorPerfilPesquisa(getContext(), lista_perfil);
 
         //Capiturando o scroll no recycleView dx = horizontal | dy = vertical
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+        /*recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
@@ -62,7 +59,7 @@ public class PesquisaPerfFragment extends Fragment {
                     card_meu_perfil.setVisibility(View.GONE);
                 }
             }
-        });
+        });*/
 
         //teste animação
         /*if(linear_Layout_meu_peril.getVisibility() == View.GONE){
@@ -83,7 +80,7 @@ public class PesquisaPerfFragment extends Fragment {
 
 
         //acessando meu perfil card
-        card_meu_perfil.setOnClickListener(new View.OnClickListener() {
+        /*card_meu_perfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(),PesquisaPerfTelaTrabalhadorActivity.class));
@@ -95,7 +92,7 @@ public class PesquisaPerfFragment extends Fragment {
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), PesquisaPerfTelaTrabalhadorActivity.class));
             }
-        });
+        });*/
 
         //Entrada de dados
         adicionarPerfil("Subaru");
